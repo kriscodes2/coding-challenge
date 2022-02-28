@@ -34,9 +34,6 @@ export default function MovieFetch() {
               {" "}
               released {moment(movie.release_date).format("MM-DD-yy")}
             </p>
-            <a className="text-info" href={movie.homepage}>
-              click to view
-            </a>
           </CardBody>
         </Card>
       </Col>

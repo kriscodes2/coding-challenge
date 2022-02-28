@@ -41,16 +41,16 @@ function App() {
         <Row>
           <Col>
             <Card className="mx-auto p-5" body inverse color="secondary">
-              <CardHeader color="success">
+              <CardHeader className="mx-auto text-info">
                 <h1>Coding Challenge</h1>
-                <h2>Coded by Kris Christopher</h2>
+                <h2 className="mx-auto">Coded by <br/> Kris Christopher</h2>
               </CardHeader>
-              <CardBody>
+              <CardBody className="mx-auto">
                 <Button color="success" onClick={(e) => onMovieClickHandler(e)}>
-                  Show TV Shows
+                  {!tvVisible ? "Show TV Shows" : "Hide TV Shows"}
                 </Button>
                 <Button color="danger" onClick={(e) => onTvClickHandler(e)}>
-                  Show Movies
+                {!movieVisible ? "Show Movies" : "Hide Movies"}
                   </Button>
               </CardBody>
               <CardFooter></CardFooter>
