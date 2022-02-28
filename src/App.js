@@ -17,13 +17,19 @@ function App() {
   const [movieVisible, setMovieVisible] = useState(false);
   const onMovieClickHandler = (e) => {
     e.preventDefault();
-    let visible = false;
-    setTvVisible(!visible);
+    if (tvVisible) {
+      setTvVisible(false)
+    } else if (!tvVisible) {
+      setTvVisible(true)
+    }
   };
   const onTvClickHandler = (e) => {
     e.preventDefault();
-    let visible = false;
-    setMovieVisible(!visible);
+    if (movieVisible) {
+      setMovieVisible(false)
+    } else if (!movieVisible) {
+      setMovieVisible(true)
+    }
   };
 
   return (
@@ -43,7 +49,9 @@ function App() {
                 <Button color="success" onClick={(e) => onMovieClickHandler(e)}>
                   Show TV Shows
                 </Button>
-                <Button color="danger" onClick={(e) => onTvClickHandler(e)}>Show Movies</Button>
+                <Button color="danger" onClick={(e) => onTvClickHandler(e)}>
+                  Show Movies
+                  </Button>
               </CardBody>
               <CardFooter></CardFooter>
             </Card>
